@@ -9,11 +9,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.lang.reflect.InvocationTargetException;
 
 public class FirstActivity extends AppCompatActivity {
+
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.first_layout);//加载自定义布局
 
         Button button1 = (Button) findViewById(R.id.button_1); //学习一下编写lambda表达式
+        imageView = (ImageView)findViewById(R.id.image_view_1);
         button1.setOnClickListener(v -> {
             //Toast.makeText(FirstActivity.this, "点击完成", Toast.LENGTH_LONG).show();
 
@@ -35,10 +39,14 @@ public class FirstActivity extends AppCompatActivity {
             //intent.setData(Uri.parse("tel:10086"));
 
             //使用intent传递数据
-            String data = "you see see you";
-            Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
-            intent.putExtra("data", data);
-            startActivity(intent);
+            //String data = "you see see you";
+            //Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+            //intent.putExtra("data", data);
+            //startActivity(intent);
+
+            //更改图片
+            imageView.setImageResource(R.drawable.landscape);
+
         });
     }
 
