@@ -1,7 +1,9 @@
 package com.gangben.androidstudy;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -52,6 +54,18 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 //int pro = progressBar.getProgress();
                 //pro += 10;
                 //progressBar.setProgress(pro);
+
+                //使用对话框dialog
+                AlertDialog.Builder dialog =new AlertDialog.Builder(SecondActivity.this);
+                dialog.setTitle("Warning MSG");
+                dialog.setMessage("你是脑残吗?");
+                dialog.setCancelable(false);
+                dialog.setPositiveButton("有些人请好自为之", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                dialog.show();
                 break;
             default:
                 break;
