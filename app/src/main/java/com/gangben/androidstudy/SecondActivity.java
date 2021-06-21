@@ -8,12 +8,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editText;
+
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +33,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 //        Log.d("SecondActivity",msg);
 
         editText = (EditText) findViewById(R.id.edi_1);
-
+        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
     }
 
     /***
@@ -42,8 +45,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()) {
             case R.id.button_2:
                 //业务逻辑
-                String inputText = editText.getText().toString();
-                Toast.makeText(SecondActivity.this, inputText, Toast.LENGTH_SHORT).show();
+                //String inputText = editText.getText().toString();
+                //Toast.makeText(SecondActivity.this, inputText, Toast.LENGTH_SHORT).show();
+
+                //处理progress_bar
+                //int pro = progressBar.getProgress();
+                //pro += 10;
+                //progressBar.setProgress(pro);
                 break;
             default:
                 break;

@@ -40,12 +40,12 @@ public class FirstActivity extends AppCompatActivity {
 
             //使用intent传递数据
             //String data = "you see see you";
-            //Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+            Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
             //intent.putExtra("data", data);
-            //startActivity(intent);
+            startActivity(intent);
 
             //更改图片
-            imageView.setImageResource(R.drawable.landscape);
+            //imageView.setImageResource(R.drawable.landscape);
 
         });
     }
