@@ -3,6 +3,7 @@ package com.gangben.androidstudy;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,10 +30,10 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         Button button2 = (Button) findViewById(R.id.button_2);
         button2.setOnClickListener(this);
 
-//        Intent intent = getIntent();
-//        //是什么类型就用什么类型，这里是String类型
-//        String msg = intent.getStringExtra("data");
-//        Log.d("SecondActivity",msg);
+        //Intent intent = getIntent();
+        ////是什么类型就用什么类型，这里是String类型
+        //String msg = intent.getStringExtra("data");
+        //Log.d("SecondActivity",msg);
 
         editText = (EditText) findViewById(R.id.edi_1);
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
@@ -55,7 +56,10 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 //pro += 10;
                 //progressBar.setProgress(pro);
 
-                //使用对话框dialog
+
+                /****
+                 * descrpition：使用对话框dialog
+                 *
                 AlertDialog.Builder dialog =new AlertDialog.Builder(SecondActivity.this);
                 dialog.setTitle("Warning MSG");
                 dialog.setMessage("你是脑残吗?");
@@ -65,7 +69,15 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 });
-                dialog.show();
+                dialog.show();*/
+
+                //使用ProgressDialog
+                //ProgressDialog progressDialog = new ProgressDialog(SecondActivity.this);
+                //progressDialog.setTitle("Warning MSG");
+                //progressDialog.setMessage("你是脑残吗?");
+                //progressDialog.setCancelable(true);
+                //progressDialog.show();
+
                 break;
             default:
                 break;

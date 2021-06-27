@@ -7,6 +7,8 @@
     tools:context=".SecondActivity"
     android:orientation="vertical">
 
+    <include layout="@layout/custom_layout"/>
+
     <Button
         android:id="@+id/button_2"
         android:layout_width="match_parent"
@@ -27,5 +29,6 @@
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:max="100"
         />
+
 
 </LinearLayout>
