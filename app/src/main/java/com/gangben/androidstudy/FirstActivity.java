@@ -54,7 +54,7 @@ public class FirstActivity extends AppCompatActivity {
 
             //使用intent传递数据
             //String data = "you see see you";
-            Intent intent = new Intent(FirstActivity.this, BroadCastNetwork.class);
+            Intent intent = new Intent(FirstActivity.this, SharedPreference.class);
             //intent.putExtra("data", data);
             startActivity(intent);
 
