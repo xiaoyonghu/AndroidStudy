@@ -36,6 +36,7 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.first_layout);//加载自定义布局
 
         Button button1 = (Button) findViewById(R.id.button_1); //学习一下编写lambda表达式
+
         imageView = (ImageView) findViewById(R.id.image_view_1);
         editText = (EditText) findViewById(R.id.edit_text_local);
 
@@ -54,7 +55,7 @@ public class FirstActivity extends AppCompatActivity {
 
             //使用intent传递数据
             //String data = "you see see you";
-            Intent intent = new Intent(FirstActivity.this, SharedPreference.class);
+            Intent intent = new Intent(FirstActivity.this, SQLiteStudy.class);
             //intent.putExtra("data", data);
             startActivity(intent);
 
@@ -62,6 +63,8 @@ public class FirstActivity extends AppCompatActivity {
             //imageView.setImageResource(R.drawable.landscape);
 
         });
+
+
 
         /**
          * 从本地加载内容

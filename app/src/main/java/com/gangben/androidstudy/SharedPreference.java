@@ -11,6 +11,10 @@ import android.widget.Toast;
 
 public class SharedPreference extends AppCompatActivity {
 
+    private SharedPreferences sp;
+
+    private SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +26,7 @@ public class SharedPreference extends AppCompatActivity {
 
         readData.setOnClickListener(v -> {
             Toast.makeText(SharedPreference.this, "读取 share_pref 被点击了", Toast.LENGTH_SHORT).show();
-            SharedPreferences sp = getSharedPreferences("data_sha_pref", MODE_PRIVATE);
+            sp = getSharedPreferences("data_sha_pref", MODE_PRIVATE);
             String name = sp.getString("name", "你说傻子吧");
             int age = sp.getInt("age", 0);
             Boolean married = sp.getBoolean("married", false);
@@ -33,7 +37,7 @@ public class SharedPreference extends AppCompatActivity {
 
         saveData.setOnClickListener(v -> {
             Toast.makeText(SharedPreference.this, "存储 share_pref 被点击了", Toast.LENGTH_SHORT).show();
-            SharedPreferences.Editor editor = getSharedPreferences("data_sha_pref", MODE_PRIVATE).edit();
+            editor = getSharedPreferences("data_sha_pref", MODE_PRIVATE).edit();
             editor.putString("name", "Jack");
             editor.putInt("age", 22);
             editor.putBoolean("married", false);
